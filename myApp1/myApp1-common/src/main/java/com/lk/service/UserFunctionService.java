@@ -14,4 +14,5 @@ public interface UserFunctionService extends Serializable{
 	@PreAuthorize("#hasPermission")
 	public ResponseTest findUserLastName(boolean hasPermission,RequestTest requestTest);
 
-}
+	public void test();
+}	
