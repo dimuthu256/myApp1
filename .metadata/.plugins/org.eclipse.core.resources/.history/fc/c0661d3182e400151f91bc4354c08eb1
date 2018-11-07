@@ -1,0 +1,52 @@
+package com.lk.test;
+
+import javax.annotation.PostConstruct;
+
+import com.lk.service.UserFunctionService;
+
+public class TestBean {
+	
+	private String fname;
+	private String lname;
+	private CommonTest commonTest;
+	private UserFunctionService userFunctionService;
+	
+	@PostConstruct
+	public void init(){
+		commonTest = new CommonTest();
+		fname = "dimuthu";
+		commonTest = userFunctionService.findUserLastName(fname);
+	}
+
+	public String getFname() {
+		return fname;
+	}
+
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+
+	public String getLname() {
+		return lname;
+	}
+
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+
+	public CommonTest getCommonTest() {
+		return commonTest;
+	}
+
+	public void setCommonTest(CommonTest commonTest) {
+		this.commonTest = commonTest;
+	}
+
+	public UserFunctionService getUserFunctionService() {
+		return userFunctionService;
+	}
+
+	public void setUserFunctionService(UserFunctionService userFunctionService) {
+		this.userFunctionService = userFunctionService;
+	}
+}

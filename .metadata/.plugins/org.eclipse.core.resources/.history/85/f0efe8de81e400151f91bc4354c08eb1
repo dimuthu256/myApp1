@@ -1,0 +1,52 @@
+package com.lk.rest;
+
+import javax.annotation.PostConstruct;
+
+import com.lk.service.UserFunctionService;
+import com.lk.test.CommonTest;
+
+public class TestRest implements UserFunctionService{
+	private String lname;
+	private String sucesses;
+	private CommonTest commonTest;
+	
+	public void initRest(){
+		sucesses = "Sucessfully Loaded..!!!";
+		commonTest = new CommonTest();
+		commonTest.setLname("Weerarathne");
+	}
+
+	public String getLname() {
+		return lname;
+	}
+
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+
+	public CommonTest getCommonTest() {
+		return commonTest;
+	}
+
+	public void setCommonTest(CommonTest commonTest) {
+		this.commonTest = commonTest;
+	}
+
+	public String getSucesses() {
+		return sucesses;
+	}
+
+	public void setSucesses(String sucesses) {
+		this.sucesses = sucesses;
+	}
+
+	@Override
+	public CommonTest findUserLastName(String fname) {
+		if(fname.equals("dimuthu")){
+			lname = "Weerarathne";
+		}
+		else lname = "no found";
+		return commonTest;
+	}
+
+}

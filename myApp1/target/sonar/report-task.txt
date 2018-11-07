@@ -1,0 +1,6 @@
+projectKey=com.lk:myApp1
+serverUrl=http://localhost:9000
+serverVersion=7.0.0.36138
+dashboardUrl=http://localhost:9000/dashboard/index/com.lk:myApp1
+ceTaskId=AWKmvP6d181pdHz3GVk5
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWKmvP6d181pdHz3GVk5

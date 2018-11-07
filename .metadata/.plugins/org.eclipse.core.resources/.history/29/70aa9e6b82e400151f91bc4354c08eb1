@@ -1,0 +1,9 @@
+package com.lk.service;
+
+import com.lk.test.CommonTest;
+
+public interface UserFunctionService {
+	
+	public CommonTest findUserLastName(String fname);
+
+}

@@ -1,0 +1,11 @@
+package com.lk.service;
+
+import java.io.Serializable;
+
+import com.lk.test.CommonTest;
+
+public interface UserFunctionService extends Serializable{
+	
+	public CommonTest findUserLastName(String fname);
+
+}

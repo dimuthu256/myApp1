@@ -1,0 +1,15 @@
+package com.lk.test;
+
+public class CommonTest {
+	private String lname;
+
+	public String getLname() {
+		lname = "weerarathne";
+		return lname;
+	}
+
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+	
+}

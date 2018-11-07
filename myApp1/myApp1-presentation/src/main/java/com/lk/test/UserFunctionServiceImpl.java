@@ -1,0 +1,36 @@
+package com.lk.test;
+
+import org.springframework.web.client.RestTemplate;
+
+import com.lk.service.UserFunctionService;
+
+public class UserFunctionServiceImpl implements UserFunctionService{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	protected RestTemplate restTemplate;
+	
+
+	public UserFunctionServiceImpl(){
+		
+	}
+	
+	/*@Override
+	public CommonTest findUserLastName(true,) {
+		CommonTest commonTest;
+		commonTest = restTemplate.postForObject("http://localhost:8780/myApp1-service/rest/findUsers", true, CommonTest.class);
+		return commonTest;
+	}*/
+	@Override
+	public ResponseTest findUserLastName(boolean hasPermission,RequestTest requestTest) {
+		ResponseTest responseTest;
+		responseTest = restTemplate.postForObject("http://localhost:8780/myApp1-service/rest"+REST_CONTROLLER_URL.FIND_USER_NAME, requestTest, ResponseTest.class);
+		return responseTest;
+	}
+
+	public void setRestTemplate(RestTemplate restTemplate) {
+		this.restTemplate = restTemplate;
+	}
+	
+}

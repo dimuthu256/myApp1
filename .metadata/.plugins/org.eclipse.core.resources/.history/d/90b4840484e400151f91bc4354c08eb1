@@ -1,0 +1,15 @@
+package com.lk.rest;
+
+import com.lk.service.UserFunctionService;
+import com.lk.test.CommonTest;
+
+public class TestRestImpl implements UserFunctionService{
+
+	@Override
+	public CommonTest findUserLastName(String fname) {
+		CommonTest commonTest;
+		commonTest = 
+		return null;
+	}
+
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+
+
+
+
+
+	<bean id="roleFunctionService"
+		class="lk.inova.controller.service.impl.RoleFunctionServiceImpl">
+		<property name="restTemplate" ref="restTemplate" />
+	</bean>
+
+
+	<bean id="appUserRoleService" class="lk.inova.controller.service.impl.AppUserRoleServiceImpl">
+		<property name="restTemplate" ref="restTemplate" />
+		<!-- <property name="cryptoService" ref="cryptoService" /> -->
+	</bean>
+
+	<bean id="txnService" class="lk.inova.controller.service.impl.TxnServiceImpl">
+		<property name="restTemplate" ref="restTemplate" />
+	</bean>
+	<bean id="bulkUploadService" class="lk.inova.controller.service.impl.BulkUploadServiceImpl">
+		<property name="restTemplate" ref="restTemplate" />
+	</bean>
+	<bean id="customerService" class="lk.inova.controller.rest.impl.CustomerServiceImpl">
+		<property name="restTemplate" ref="restTemplate" />
+	</bean>
+
+	<bean id="reportService" class="lk.inova.controller.service.impl.ReportServiceImpl">
+<!-- 	<property name="txnService" ref="txnService"></property> -->
+	</bean>
+
+	<bean id="commonService" class="lk.inova.controller.service.impl.CommonServiceImpl">
+		<property name="restTemplate" ref="restTemplate" />
+	</bean>
+
+	<bean id="allReportsService" class="lk.inova.controller.service.impl.AllReportsServiceImpl">
+		<property name="restTemplate" ref="restTemplate" />
+	</bean>
+
+</beans>

@@ -1,0 +1,35 @@
+package com.lk.rest;
+
+import javax.annotation.PostConstruct;
+import javax.faces.bean.ApplicationScoped;
+
+import com.lk.test.CommonTest;
+
+@ApplicationScoped
+public class TestRest {
+	private String lname;
+	private CommonTest commonTest;
+	
+	@PostConstruct
+	public void initRest(){
+		commonTest = new CommonTest();
+		commonTest.setLname("Weerarathne");
+	}
+
+	public String getLname() {
+		return lname;
+	}
+
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+
+	public CommonTest getCommonTest() {
+		return commonTest;
+	}
+
+	public void setCommonTest(CommonTest commonTest) {
+		this.commonTest = commonTest;
+	}
+
+}
